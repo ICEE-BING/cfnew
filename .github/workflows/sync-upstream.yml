@@ -9,6 +9,9 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Need write permission to push changes
+      actions: read    # Need read permission for workflow dispatch
     
     steps:
       - name: Checkout repository
